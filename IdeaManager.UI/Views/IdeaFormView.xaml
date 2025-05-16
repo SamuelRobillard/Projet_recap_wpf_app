@@ -4,24 +4,23 @@
       Title="IdeaFormView">
 
     <StackPanel Margin="20" Width="400">
-        <Button Content="← Retour"
-                HorizontalAlignment="Left"
-                Click="OnBackClick"
-                Width="100"
-                Margin="0 0 0 15" />
 
-        <TextBlock Text="Soumettre une idée" FontSize="20" Margin="0 0 0 15"/>
+        <TextBlock Text="Soumettre une idée" FontSize="20" Margin="0 0 0 15" Width="176"/>
 
-        <TextBlock Text="Titre :" />
+        <TextBlock Text="Titre :" Width="28" />
         <TextBox Text="{Binding Title, UpdateSourceTrigger=PropertyChanged}" />
 
-        <TextBlock Text="Description :" Margin="0 15 0 0" />
+        <TextBlock Text="Description :" Margin="0 15 0 0" Width="69" />
         <TextBox Text="{Binding Description}" AcceptsReturn="True" Height="80" />
 
         <Button Content="Soumettre"
                 Command="{Binding SubmitCommand}"
                 Click="OnBackClick"
                 Margin="0 20 0 0"
-                Height="40" />
+                Height="40" Width="82" />
+        <Button Content="Cancel"
+                Click="OnBackClick"
+                Width="84"
+                />
     </StackPanel>
 </Page>

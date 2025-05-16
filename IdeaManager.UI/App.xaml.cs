@@ -1,13 +1,13 @@
 ﻿using IdeaManager.Data;
 using IdeaManager.Services;
+using IdeaManager.UI.ViewModels;
+using IdeaManager.UI.Views;
 using Microsoft.Extensions.DependencyInjection;
+using System.IO;
 using System.Windows;
 
 namespace IdeaManager.UI;
 
-/// <summary>
-/// Interaction logic for App.xaml
-/// </summary>
 public partial class App : Application
 {
     public static IServiceProvider ServiceProvider { get; private set; } = null!;
@@ -16,14 +16,19 @@ public partial class App : Application
     {
         var services = new ServiceCollection();
 
-        services.AddDataServices("Data Source=ideas.db");
+        var dbPath = @"C:\labfinal\Projet_recap_wpf_app\IdeaManager.Data\ideas.db";
+
+        services.AddDataServices($"Data Source={dbPath}");
         services.AddDomainServices();
         services.AddUIServices();
+
+        
+        services.AddTransient<ProjectListViewModel>();
 
         ServiceProvider = services.BuildServiceProvider();
 
         var mainWindow = ServiceProvider.GetRequiredService<MainWindow>();
         mainWindow.Show();
     }
-}
 
+}

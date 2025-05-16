@@ -12,20 +12,19 @@
 
         <!--Les contrôles nécessaire sont tous là, mais il manque des propriétés 
          à compéter pour le binding adéquat-->
-        <Button Content="← Retour"
-        HorizontalAlignment="Left"
-        Click="OnBackClick"
-        Width="100"
-        Margin="0 0 0 15" />
         <!--Affichage de la liste de tous les livres-->
         <Label Content="Liste des livres" />
 
 
         <DataGrid ItemsSource="{Binding}">
         </DataGrid>
+        <Button Content="back"
+        Click="OnBackClick"
+        Width="100"
+        Margin="200"/>
 
         <!--Recheche des livres par auteur et tri par année-->
-       
+
 
 
 
