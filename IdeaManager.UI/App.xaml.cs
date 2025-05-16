@@ -10,7 +10,7 @@ namespace IdeaManager.UI;
 /// </summary>
 public partial class App : Application
 {
-    public static IServiceProvider ServiceProvider { get; private set; }
+    public static IServiceProvider ServiceProvider { get; private set; } = null!;
 
     protected override void OnStartup(StartupEventArgs e)
     {

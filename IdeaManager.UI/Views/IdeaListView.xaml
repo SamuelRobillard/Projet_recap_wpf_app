@@ -8,7 +8,28 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="IdeaListView">
 
-    <Grid>
-        
-    </Grid>
+    <StackPanel Margin="20">
+
+        <!--Les contrôles nécessaire sont tous là, mais il manque des propriétés 
+         à compéter pour le binding adéquat-->
+        <Button Content="← Retour"
+        HorizontalAlignment="Left"
+        Click="OnBackClick"
+        Width="100"
+        Margin="0 0 0 15" />
+        <!--Affichage de la liste de tous les livres-->
+        <Label Content="Liste des livres" />
+
+
+        <DataGrid ItemsSource="{Binding}">
+        </DataGrid>
+
+        <!--Recheche des livres par auteur et tri par année-->
+       
+
+
+
+        <!--Àffichage des résultats de la recherche-->
+
+    </StackPanel>
 </Page>
