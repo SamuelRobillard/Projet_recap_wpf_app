@@ -18,7 +18,7 @@
                 Click="OnBackClick"
                 Margin="0 20 0 0"
                 Height="40" Width="82" />
-        <Button Content="Cancel"
+        <Button Content="back"
                 Click="OnBackClick"
                 Width="84"
                 />

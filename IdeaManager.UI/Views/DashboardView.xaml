@@ -12,12 +12,12 @@
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Height="430">
             <TextBlock FontSize="24" FontWeight="Bold" Margin="0 10,0  20" Height="39"><Run Language="fr-ca" Text="Gestions d'idées"/></TextBlock>
 
-            <Button Content="Soumettre une idée"
+            <Button Content="Creer une idée"
                 Width="200" Height="40"
                 Margin="0 10"
                 Click="OnSubmitIdeaClick" />
 
-            <Button Content="Voir les idées"
+            <Button Content="Voir la liste d'idées"
                 Width="200" Height="40"
                 Margin="0 10"
                 Click="OnViewIdeasClick" />
